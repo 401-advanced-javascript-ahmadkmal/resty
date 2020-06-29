@@ -11,7 +11,9 @@
 - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable) -->
 - [front-end application](https://musing-booth-a3b47c.netlify.app/
-) 
+)
+- [front-end application](https://401-advanced-javascript-ahmadkmal.github.io/resty/
+)
 
 ### Setup
 
