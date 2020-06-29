@@ -27,6 +27,17 @@
     "eject": "react-scripts eject",
     "CI": "react-scripts build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadkmal/resty.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmadkmal/resty/issues"
+  },
+  "homepage": "https://ahmadkmal.github.io/resty/",
   "browserslist": {
     "production": [
       ">0.2%",
