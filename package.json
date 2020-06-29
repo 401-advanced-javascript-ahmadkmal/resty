@@ -22,12 +22,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "CI": "react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint '**/*.js'",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "CI": "react-scripts build"
   },
   "browserslist": {
     "production": [
