@@ -13,7 +13,7 @@ class Form extends React.Component {
     };
   }
   
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
 
     if ( this.state.url && this.state.method ) {
@@ -23,13 +23,30 @@ class Form extends React.Component {
         url: this.state.url,
         method: this.state.method,
       };
-
+      e.target.reset();
+      try {
+        const raw = await fetch(this.state.url,{
+          method: "GET",
+          body: JSON.stringify(),
+          headers: {
+            "Content-Type": "application/json"
+          }});
+        console.log(raw.headers);
+        const data = await raw.json();
+        console.log(data);
+        // reduce((acc,cur)=>{},initValue)
+       
+        // we want to send the results up to the App component
+        this.props.handler(data);
+      } catch (e) {
+        console.log('error in fetch',e);
+      }
       // Clear old settings
       let url = '';
       let method = '';
 
       this.setState({request, url, method});
-      // e.target.reset();
+      
 
     }
 

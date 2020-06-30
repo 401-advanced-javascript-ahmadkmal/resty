@@ -7,13 +7,27 @@ import './app.scss';
 import Header from './components/header';
 import Footer from './components/footer';
 import Form from './components/form/form.js';
+import Results from  './components/results/results'
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      results: [],
+      count: 0,
+    };
+  }
+  handleForm = (results) => {
+    // this will be called from the Form component on Submit
+    console.log('hi from app', results);
+    this.setState({ results: results ,count:results.count });
+  };
   render() {
     return (
       <React.Fragment>
         <Header />
-        <Form />
+        <Form handler={this.handleForm}/>
+        <Results results={this.state.results}/>
         <Footer />
       </React.Fragment>
     );

@@ -47,7 +47,7 @@ describe('<Form/>', () => {
     const text = form.find('label input');
     text.simulate('change', {target: {value: 'abcdefghijk'}});
     console.log(form.state('url'));
-    const go = form.find('label button');
+    const go = form.find('form');
     go.simulate('submit');
     expect(form.state('url')).toBe('');
     expect(form.state('method')).toBe('');
