@@ -6,10 +6,10 @@ import Home from '../home';
 const Main = (props) => {
   return (
     <main>
-      <Route exact path="/">
+      <Route exact path="/resty/">
         <Home />
       </Route>
-      <Route exact path="/history">
+      <Route exact path="/resty/history">
         <History />
       </Route>
     </main>

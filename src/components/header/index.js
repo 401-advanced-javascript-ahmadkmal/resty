@@ -8,10 +8,10 @@ class Header extends React.Component {
         <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/resty/">Home</Link>
           </li>
           <li>
-            <NavLink to="/history">History</NavLink>
+            <NavLink to="/resty/history">History</NavLink>
           </li>
         </ul>
       </nav>
