@@ -6,7 +6,7 @@ class HomeHistory extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rest: JSON.parse(localStorage.getItem('history')),
+            rest: JSON.parse(localStorage.getItem('history'))||{},
         };
     }
 
